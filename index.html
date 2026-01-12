@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Registration Progress - Ifrit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Ifrit Registration</div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="active">Overview</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="documents.html">Documents</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Company Registration in Progress</h1>
+            <p class="subtitle">Ifrit International Logistics & Trade Company - Yiwu, Zhejiang Province, China</p>
+            <div class="progress-overview">
+                <div class="progress-circle">
+                    <svg viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" />
+                        <circle cx="50" cy="50" r="45" id="progress-ring" />
+                    </svg>
+                    <span class="progress-text" id="overall-progress">0%</span>
+                </div>
+                <div class="progress-details">
+                    <h3>Current Phase: <span id="current-phase">Initial Documentation</span></h3>
+                    <p>Expected Completion: <span id="expected-date">TBD</span></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="company-info">
+        <div class="container">
+            <h2>About the Company</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>📍 Location</h3>
+                    <p>Yiwu City, Zhejiang Province, China</p>
+                </div>
+                <div class="info-card">
+                    <h3>🏢 Business Scope</h3>
+                    <p>Trading (Import/Export), International & Domestic Freight Forwarding, Logistics, Consultancy Services, E-commerce, Marketing & Promotion</p>
+                </div>
+                <div class="info-card">
+                    <h3>📅 Registration Started</h3>
+                    <p id="start-date">January 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-status">
+        <div class="container">
+            <h2>Registration Status Summary</h2>
+            <div class="status-grid" id="status-summary">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ifrit Registration Portal. Internal Use Only.</p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav-menu').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

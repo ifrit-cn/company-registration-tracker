@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Ifrit Registration</div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="documents.html">Documents</a></li>
+                <li><a href="admin.html" class="active">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container page-content">
+        <div id="login-form" class="admin-panel">
+            <h1>Admin Login</h1>
+            <input type="password" id="admin-password" placeholder="Enter password">
+            <button onclick="login()">Login</button>
+            <p class="error" id="login-error"></p>
+        </div>
+
+        <div id="admin-content" style="display:none;">
+            <h1>Update Registration Progress</h1>
+            <div class="admin-sections">
+                <section class="admin-section">
+                    <h2>Update Phase Status</h2>
+                    <div id="phase-updates"></div>
+                </section>
+                <section class="admin-section">
+                    <h2>Update Documents</h2>
+                    <div id="document-updates"></div>
+                </section>
+                <button onclick="saveChanges()" class="save-btn">Save All Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ifrit Registration Portal. Internal Use Only.</p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="admin.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+        
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav-menu').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
