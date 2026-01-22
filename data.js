@@ -10,7 +10,7 @@ const registrationData = {
         {
             id: 1,
             name: "Initial Documentation",
-            status: "under review",
+            status: "under-review",
             startDate: "2026-01-7",
             endDate: "TBD",
             tasks: [
