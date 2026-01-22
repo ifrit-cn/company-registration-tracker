@@ -76,7 +76,7 @@ const registrationData = {
         { name: "Passport copies", status: "in-preparation", category: "Identity" },
         { name: "Company name", status: "under-review", category: "Registration" },
         { name: "Articles of Association", status: "not-started", category: "Registration" },
-        { name: "Business scope approval document", status: "in-preparation", category: "Registration" },
+        { name: "Business scope approval document", status: "under-review", category: "Registration" },
         { name: "Lease agreement for office", status: "completed", category: "Property" },
         { name: "Business license application", status: "in-preparation", category: "Registration" },
         { name: "Bank Account Opening", status: "not-started", category: "Banking" },
